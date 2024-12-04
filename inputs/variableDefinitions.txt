@@ -1,9 +1,9 @@
 ----
-i = 10
+i = 90
 i
 ----
-sum = 20
+sum = 80
 sum
 ----
-TOTAL = 30
+TOTAL = 170
 TOTAL
