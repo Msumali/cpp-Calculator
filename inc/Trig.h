@@ -7,15 +7,27 @@
 
 namespace TrigRatio{
 class Trig{
-    public:
-static double sinDegSolv(double f);
-static double sinRadSolv(double f);
-static double asinDegSolv(double f);
-static double asinRadSolv(double f);
-static double cosFunc(double f);
-static double cosRadSolv(double f);
-static double acosDegSolv(double f);
-static double acosRadSolv(double f);
+public:
+    //Constructor
+    Trig() = default;
+
+    //Sine functions
+    double sinDegSolv(double f);
+    double sinRadSolv(double f);
+    double asinDegSolv(double f);
+    double asinRadSolv(double f);
+
+    //Cosine functions
+    double cosFunc(double f);
+    double cosRadSolv(double f);
+    double acosDegSolv(double f);
+    double acosRadSolv(double f);
+
+    //Tangent functions
+    double tanDegSolv(double f);
+    double tanRadSolv(double f);
+    double atanDegSolv(double f);
+    double atanRadSolv(double f);
 };
 }
 

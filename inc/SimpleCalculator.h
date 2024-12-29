@@ -1,5 +1,5 @@
-#ifndef SIMPLECALCULATOR_H
-#define SIMPLECALCULATOR_H
+#ifndef SIMPLE_CALCULATOR_H
+#define SIMPLE_CALCULATOR_H
 
 #include <iostream>
 #include <fstream>
@@ -8,32 +8,31 @@
 #include <map>
 #include <functional>
 #include <cmath>
-#include "Utils.h"
+#include "Utilities.h"
 #include "BasicOperations.h"
 #include "Constants.h"
 
+
 class SimpleCalculator {
-    // Define variables as a private member within the class
-  private:
-  std::map<std::string, double> variables;
+public:
+    SimpleCalculator();
+    bool fileExecution(std::string fileName);
+
+    
+private:
+    //Member variable
+    std::map<std::string, double> variables;
 
     // Math Functions
     bool mathFunc(std::string math, double &result);
-    void mathOp(std::string &math, string symbol, const function<double(double, double)> &f);
-    void mathFunc(std::string &math, string symbol,const function<double(double)> &f);
+    void mathOp(std::string &math, std::string symbol, const std::function<double(double, double)> &f);
+    void mathFunc(std::string &math, std::string symbol, const std::function<double(double)> &f);
 
-    // Supporting Functions
-    bool variableDef(std::string line);
-    
-    // static double getVarMath(string my_Var);
+    // Supporting Functions for variable handling
+    bool variableDef(std::string& line);
     double getVarMath(std::string my_Var);
 
-    void string_Filter(char *str);
-    // bool check_Substring(string s2, string s1);
 
-public:
-    SimpleCalculator();
-    bool fileExecution(string fileName);
 };
 
-#endif // SIMPLECALCULATOR_H
+#endif // SIMPLE_CALCULATOR_H
